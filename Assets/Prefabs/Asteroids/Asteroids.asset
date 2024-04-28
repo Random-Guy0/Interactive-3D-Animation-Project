@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99053d0b329a4a3d83495dd72d3b8e43, type: 3}
+  m_Name: Asteroids
+  m_EditorClassIdentifier: 
+  <Transforms>k__BackingField:
+  - {fileID: 2581694441469450714, guid: 37a011d0e0d872a47bb21b6db79a4c7f, type: 3}
+  - {fileID: 8275006217692476210, guid: 67c172310f3ffcd43b42d3b2127f7832, type: 3}
+  - {fileID: 1269521679160443168, guid: c77d7e05f1c7cde43a740ce3344ab91e, type: 3}
+  - {fileID: 8837635063339765689, guid: 5561d8a8221ede9419bcdc633ef223bb, type: 3}
+  - {fileID: 8184545688064797327, guid: cf1a85395bbc7254d9bca857538160d6, type: 3}
+  - {fileID: 9066309941479452439, guid: 59444cf014272544d9428368f843aca2, type: 3}
+  - {fileID: 3558637175251916625, guid: 9095f77e20d6d9e4a9e7a092412adb8d, type: 3}
+  - {fileID: 7444564274305038242, guid: 0184eef1c727d7b45bb75d672fbae3ec, type: 3}
+  - {fileID: 12117289068386371, guid: 41c419b3a51cef1498300a7917ebcbc7, type: 3}
+  - {fileID: 7936419464793038408, guid: d59c0eb2258c69f42af3b494454545d5, type: 3}
+  - {fileID: 8177481966274681229, guid: 42a63f8e22e52eb4aad7fa1172a7c904, type: 3}
+  - {fileID: 3133394468085093317, guid: ba56ec213309a2b4bb7aad9f6c1a1ed6, type: 3}
+  - {fileID: 1739517194394851976, guid: 92b525bce13644843b7e3a2903b14a76, type: 3}
+  - {fileID: 8185375199348391768, guid: 7d24f15f5f144ee4687318b7cd7d2fb8, type: 3}
+  - {fileID: 2384967314645116649, guid: 3b67b51150efb0d4f892ef09ae0920ff, type: 3}
+  - {fileID: 5542918286639831149, guid: 01af8eea226d49f4cafc41b9607750cf, type: 3}
+  - {fileID: 2552897334713397535, guid: 4e131b06ba747554bacf9f787a7d5461, type: 3}
+  - {fileID: 5793920768789920432, guid: 960ae9cd05a3ea94a94367c8dc4e458e, type: 3}
+  - {fileID: 6064566813931000809, guid: 65d7cacdec535a2419e330a0272610de, type: 3}
+  - {fileID: 1973833950398649983, guid: 9de8ceee561ae594cbd79e88773de1fa, type: 3}
+  - {fileID: 5437131302829558441, guid: 8e457374230176347a988305b4686666, type: 3}
+  - {fileID: 7043168389290069665, guid: 5df08087ae94c0c4783c4e4a1e22ca43, type: 3}
+  - {fileID: 4203841292688190534, guid: 84d8ce33bcc336d4fbe4e5daeda69ba8, type: 3}
+  - {fileID: 8640131195764369204, guid: 0a2db450246b27e49a388eb86438176d, type: 3}
+  - {fileID: 3575964344721644472, guid: 453d02065b63bc2438086d0dce79aee8, type: 3}
+  - {fileID: 724709352527170917, guid: c6750dbee60ccf145ba1e4fac72cc2e9, type: 3}
