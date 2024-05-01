@@ -15,7 +15,7 @@ public class ChildTransformRandomizer : RandomTransformPlacerBase
     [MenuItem("Tools/Child Transform Randomizer")]
     public static void ShowWindow()
     {
-        ShowWindow<RandomTransformPlacer>("Child Transform Randomizer");
+        ShowWindow<ChildTransformRandomizer>("Child Transform Randomizer");
     }
     
     protected override void CreateGUI()
