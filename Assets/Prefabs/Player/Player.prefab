@@ -1384,7 +1384,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011758351813429293}
-  - component: {fileID: 5275873006570672473}
   - component: {fileID: -4099807601785479263}
   - component: {fileID: -777518543307540533}
   - component: {fileID: -4476026329469865469}
@@ -1412,25 +1411,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &5275873006570672473
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3365499288773165310}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: -5834283340794598800, guid: 6ad53fb423e8fd948b951345ae738e00, type: 3}
-  m_Animations:
-  - {fileID: -5834283340794598800, guid: 6ad53fb423e8fd948b951345ae738e00, type: 3}
-  - {fileID: -2474113961476506421, guid: 6ad53fb423e8fd948b951345ae738e00, type: 3}
-  - {fileID: 5249646727399116394, guid: 6ad53fb423e8fd948b951345ae738e00, type: 3}
-  - {fileID: 8743039071427433111, guid: 6ad53fb423e8fd948b951345ae738e00, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &-4099807601785479263
 MonoBehaviour:
   m_ObjectHideFlags: 0
