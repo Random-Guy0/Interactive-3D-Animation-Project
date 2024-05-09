@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
+using Random = UnityEngine.Random;
 
 public class InteractiveSceneManager : MonoBehaviour
 {
@@ -14,6 +16,12 @@ public class InteractiveSceneManager : MonoBehaviour
     [SerializeField] private Transform endPoint;
     [SerializeField] private Transform minPosition;
     [SerializeField] private Transform maxPosition;
+    [SerializeField] private float asteroidDelay = 1f;
+    [SerializeField] private float asteroidMinSpeed = 2f;
+    [SerializeField] private float asteroidMaxSpeed = 20f;
+    [SerializeField] private Transform asteroidMinPosition;
+    [SerializeField] private Transform asteroidMaxPosition;
+    [SerializeField] private GameObject[] asteroids;
     private PlayerController _playerController;
     
     public void StartInteractiveScene()
@@ -36,6 +44,7 @@ public class InteractiveSceneManager : MonoBehaviour
         }
         
         _playerController.SetMinAndMaxPosition(minPosition, maxPosition);
+        Invoke(nameof(CreateAsteroid), asteroidDelay);
     }
 
     public void EndInteractiveScene()
@@ -48,5 +57,21 @@ public class InteractiveSceneManager : MonoBehaviour
     private void Start()
     {
         StartInteractiveScene();
+    }
+
+    private void CreateAsteroid()
+    {
+        if (!gameObject.IsDestroyed())
+        {
+            int asteroidIndex = Random.Range(0, asteroids.Length);
+            Vector3 position = RandomUtils.RandomVector3(asteroidMinPosition.position, asteroidMaxPosition.position);
+            Quaternion rotation = Quaternion.Euler(RandomUtils.RandomVector3(Vector3.zero, Vector3.one * 360f));
+            GameObject asteroid = Instantiate(asteroids[asteroidIndex], position, rotation);
+            float speed = Random.Range(asteroidMinSpeed, asteroidMaxSpeed);
+            Rigidbody rb = asteroid.GetComponent<Rigidbody>();
+            rb.AddForce(Vector3.right * speed, ForceMode.Impulse);
+            rb.AddTorque(Vector3.right * speed, ForceMode.Impulse);
+            Invoke(nameof(CreateAsteroid), asteroidDelay);
+        }
     }
 }

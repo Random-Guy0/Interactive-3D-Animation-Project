@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid_no_4 Variant - Copy
       objectReference: {fileID: 0}
+    - target: {fileID: 2021222132309034723, guid: 5561d8a8221ede9419bcdc633ef223bb, type: 3}
+      propertyPath: m_TagString
+      value: Asteroid
+      objectReference: {fileID: 0}
     - target: {fileID: 8837635063339765689, guid: 5561d8a8221ede9419bcdc633ef223bb, type: 3}
       propertyPath: m_RootOrder
       value: 0

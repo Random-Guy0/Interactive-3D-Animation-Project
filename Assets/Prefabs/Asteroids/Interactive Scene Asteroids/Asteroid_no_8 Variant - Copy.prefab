@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid_no_8 Variant - Copy
       objectReference: {fileID: 0}
+    - target: {fileID: 8044493279691287736, guid: 0184eef1c727d7b45bb75d672fbae3ec, type: 3}
+      propertyPath: m_TagString
+      value: Asteroid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
