@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 2f;
     [SerializeField] private float maxSpeed = 2f;
     [SerializeField] private float rotationSpeed = 15f;
+    [SerializeField] private float hitSpeed = 4f;
 
     private Transform _minPosition;
     private Transform _maxPosition;
@@ -17,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
 
     private Vector2 _moveInput;
+
+    private bool lockInput = false;
     
     public Action EndCallback { get; set; }
 
@@ -49,7 +52,10 @@ public class PlayerController : MonoBehaviour
         
         Vector3 rotation = transform.rotation.eulerAngles;
         rotation.y += rotationSpeed * Time.deltaTime * _moveInput.x;
-        transform.rotation = Quaternion.Euler(rotation);
+        if (!lockInput)
+        {
+            transform.rotation = Quaternion.Euler(rotation);
+        }
     }
 
     private void FixedUpdate()
@@ -60,7 +66,7 @@ public class PlayerController : MonoBehaviour
         Vector3 velocity = x + y + z;
         velocity *= speed * Time.deltaTime;
 
-        if (_rigidbody.velocity.magnitude < maxSpeed)
+        if (_rigidbody.velocity.magnitude < maxSpeed && !lockInput)
         {
             _rigidbody.AddForce(velocity, ForceMode.Impulse);
         }
@@ -72,5 +78,38 @@ public class PlayerController : MonoBehaviour
     {
         _minPosition = minPosition;
         _maxPosition = maxPosition;
+    }
+
+    private IEnumerator Hit(Quaternion initialRotation)
+    {
+        Quaternion currentRotation = initialRotation;
+        float time = 0f;
+        while (time < 2f)
+        {
+            float amountPerFrame = -720f * Time.deltaTime * 0.5f;
+            currentRotation *= Quaternion.Euler(Vector3.right * amountPerFrame);
+            transform.rotation = currentRotation;
+            
+            yield return null;
+            time += Time.deltaTime;
+        }
+        
+        transform.localRotation = initialRotation;
+        lockInput = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Asteroid") && !lockInput)
+        {
+            lockInput = true;
+            StartCoroutine(Hit(transform.localRotation));
+            _rigidbody.AddForce(hitSpeed * -transform.forward, ForceMode.Impulse);
+        }
+        else if (other.CompareTag("InteractiveSceneEnd"))
+        {
+            Destroy(_rigidbody);
+            EndCallback();
+        }
     }
 }
