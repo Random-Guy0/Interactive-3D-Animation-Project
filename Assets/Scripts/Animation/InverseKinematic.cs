@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class InverseKinematic : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Animator anim;
+
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    private void OnAnimatorIK(int layerIndex)
     {
         
     }
