@@ -5,7 +5,7 @@ using UnityEngine;
 public class InverseKinematic : MonoBehaviour
 {
     private Animator anim;
-
+    public GameObject target;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -19,6 +19,6 @@ public class InverseKinematic : MonoBehaviour
 
     private void OnAnimatorIK(int layerIndex)
     {
-        
+        anim.SetIKPosition(AvatarIKGoal.RightHand, target.transform.position);
     }
 }
