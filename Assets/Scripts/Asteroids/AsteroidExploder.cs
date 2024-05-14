@@ -17,11 +17,6 @@ public class AsteroidExploder : MonoBehaviour
         _collider = GetComponent<SphereCollider>();
     }
 
-    private void Start()
-    {
-        Invoke(nameof(Explode), 1f);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.attachedRigidbody != null)
@@ -37,10 +32,7 @@ public class AsteroidExploder : MonoBehaviour
 
     public void Explode()
     {
-        Debug.Log(_allContacts.Count);
-
         Vector3 center = transform.TransformPoint(_collider.center);
-        Debug.Log(_collider.center);
         
         foreach (Rigidbody contact in _allContacts)
         {
