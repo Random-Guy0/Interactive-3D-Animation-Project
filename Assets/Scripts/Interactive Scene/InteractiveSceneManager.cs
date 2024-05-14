@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class InteractiveSceneManager : MonoBehaviour
@@ -52,6 +53,7 @@ public class InteractiveSceneManager : MonoBehaviour
         Destroy(_playerController);
         cinemachineCamera.Follow = null;
         cinemachineCamera.LookAt = null;
+        SceneManager.LoadScene("AfterInteractiveScene");
     }
 
     private void Start()
