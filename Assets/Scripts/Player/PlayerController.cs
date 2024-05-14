@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
     [SerializeField] private float maxSpeed = 2f;
-    [SerializeField] private float rotationSpeed = 15f;
+    [SerializeField] private float rotationSpeed = 30f;
     [SerializeField] private float hitSpeed = 4f;
 
     private Transform _minPosition;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.isKinematic = false;
-        _rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
+        //_rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
 
         _animator = GetComponent<Animator>();
     }
