@@ -19,9 +19,13 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 _moveInput;
 
-    private bool lockInput = false;
+    private bool _lockInput = false;
+    private bool _hit = false;
     
     public Action EndCallback { get; set; }
+
+    [SerializeField] private AudioSource asteroidSound;
+    [SerializeField] private AudioSource hitSound;
 
     private void Start()
     {
@@ -39,20 +43,23 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (_moveInput == Vector2.zero)
+        if (!_hit)
         {
-            _animator.SetBool("Floating", true);
-            _animator.SetBool("Moving", false);
+            if (_moveInput == Vector2.zero)
+            {
+                _animator.SetBool("Floating", true);
+                _animator.SetBool("Moving", false);
+            }
+            else
+            {
+                _animator.SetBool("Moving", true);
+                _animator.SetBool("Floating", false);
+            }
         }
-        else
-        {
-            _animator.SetBool("Moving", true);
-            _animator.SetBool("Floating", false);
-        }
-        
+
         Vector3 rotation = transform.rotation.eulerAngles;
         rotation.y += rotationSpeed * Time.deltaTime * _moveInput.x;
-        if (!lockInput)
+        if (!_lockInput)
         {
             transform.rotation = Quaternion.Euler(rotation);
         }
@@ -66,7 +73,7 @@ public class PlayerController : MonoBehaviour
         Vector3 velocity = x + y + z;
         velocity *= speed * Time.deltaTime;
 
-        if (_rigidbody.velocity.magnitude < maxSpeed && !lockInput)
+        if (_rigidbody.velocity.magnitude < maxSpeed && !_lockInput)
         {
             _rigidbody.AddForce(velocity, ForceMode.Impulse);
         }
@@ -82,6 +89,9 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Hit(Quaternion initialRotation)
     {
+        _hit = true;
+        _animator.SetBool("Moving", true);
+        _animator.SetBool("Floating", false);
         Quaternion currentRotation = initialRotation;
         float time = 0f;
         while (time < 2f)
@@ -95,16 +105,21 @@ public class PlayerController : MonoBehaviour
         }
         
         transform.localRotation = initialRotation;
-        lockInput = false;
+        _lockInput = false;
+        _hit = false;
+        _animator.SetBool("Floating", true);
+        _animator.SetBool("Moving", false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Asteroid") && !lockInput)
+        if (other.CompareTag("Asteroid") && !_lockInput)
         {
-            lockInput = true;
+            _lockInput = true;
             StartCoroutine(Hit(transform.localRotation));
             _rigidbody.AddForce(hitSpeed * -transform.forward, ForceMode.Impulse);
+            hitSound.Play();
+            asteroidSound.Play();
         }
         else if (other.CompareTag("InteractiveSceneEnd"))
         {

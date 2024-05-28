@@ -27,7 +27,7 @@ public class InteractiveSceneManager : MonoBehaviour
     
     public void StartInteractiveScene()
     {
-        _playerController = astronaut.AddComponent<PlayerController>();
+        _playerController = astronaut.GetComponent<PlayerController>();
         _playerController.EndCallback = EndInteractiveScene;
         astronaut.transform.position = startPoint.position;
         astronaut.transform.LookAt(endPoint);

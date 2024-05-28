@@ -6,6 +6,7 @@ public class EndAnimation : MonoBehaviour
 {
     public void Stop()
     {
-        UnityEditor.EditorApplication.isPaused = false;
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }
