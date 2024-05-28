@@ -1422,13 +1422,49 @@ MonoBehaviour:
     m_BlendOutDuration: 1.29297425771753
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1455,13 +1491,49 @@ MonoBehaviour:
     m_BlendOutDuration: 3.6000000000000014
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -3515,11 +3587,11 @@ AnimationClip:
       - serializedVersion: 3
         time: 34
         value: {x: 96.63883, y: 213.96503, z: 233.87784}
-        inSlope: {x: 27.411049, y: 53.14108, z: 83.03669}
-        outSlope: {x: 27.411049, y: 53.14108, z: 83.03669}
+        inSlope: {x: 7.3599644, y: 53.14108, z: 83.03669}
+        outSlope: {x: 7.3599644, y: 53.14108, z: 83.03669}
         tangentMode: 0
         weightedMode: 3
-        inWeight: {x: 0.5925255, y: 0.33333334, z: 0.56051254}
+        inWeight: {x: 0.5924492, y: 0.33333334, z: 0.56051254}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 36
@@ -3676,17 +3748,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 33
         value: {x: -58.799995, y: -47.781036, z: 8.899997}
-        inSlope: {x: -4.5333304, y: -4.5417557, z: -0.00042091036}
-        outSlope: {x: -4.5333304, y: -4.5417557, z: -0.00042091036}
+        inSlope: {x: -4.5333304, y: -4.5417557, z: 0}
+        outSlope: {x: -4.5333304, y: -4.5417557, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 34
-        value: {x: -62.199993, y: -52.44895, z: 8.899681}
-        inSlope: {x: 0, y: -4.5417533, z: 0}
-        outSlope: {x: 0, y: -4.5417533, z: 0}
+        value: {x: -62.199993, y: -52.44895, z: 11.995552}
+        inSlope: {x: 0, y: -4.5417533, z: 5.306666}
+        outSlope: {x: 0, y: -4.5417533, z: 5.306666}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -4226,15 +4298,6 @@ AnimationClip:
       - serializedVersion: 3
         time: 33
         value: 8.899997
-        inSlope: -0.00042091036
-        outSlope: -0.00042091036
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 34
-        value: 8.899681
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4391,11 +4454,11 @@ AnimationClip:
       - serializedVersion: 3
         time: 34
         value: 96.63883
-        inSlope: 27.411049
-        outSlope: 27.411049
+        inSlope: 7.3599644
+        outSlope: 7.3599644
         tangentMode: 0
         weightedMode: 3
-        inWeight: 0.5925255
+        inWeight: 0.5924492
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 36
@@ -5019,7 +5082,25 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -5046,7 +5127,25 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
